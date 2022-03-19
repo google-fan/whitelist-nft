@@ -1,0 +1,50 @@
+@import "../../../styles/variables.scss";
+
+.countdown {
+  grid-template: auto / 1fr 1fr 1fr 1fr;
+  grid-column-gap: 12px;
+
+  &-item {
+    background-color: $yellow;
+    padding: 0.25rem;
+
+    & > div {
+      grid-template: auto / 1fr 1fr;
+      grid-column-gap: 0.25rem;
+      justify-items: center;
+
+      & > span {
+        font-family: "Lato", sans-serif;
+        font-size: 5rem;
+        font-weight: 900;
+        padding: 0.25rem 0;
+
+        &:first-of-type {
+          padding: 0 0 0 0.25rem;
+        }
+
+        &:last-of-type {
+          padding: 0 0.25rem 0 0;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    & > span {
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 0.25rem;
+      background-color: $orange;
+
+      @media (max-width: 768px) {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

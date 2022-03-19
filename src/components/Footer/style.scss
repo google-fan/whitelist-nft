@@ -1,0 +1,51 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.footer {
+  width: 100%;
+  justify-content: center;
+  background-color: transparent;
+
+  &-wrapper {
+    align-items: center;
+  }
+
+  &-socials {
+    max-width: 480px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    & > a {
+      width: 48px;
+      height: 48px;
+      cursor: pointer;
+
+      & > svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &-decoration {
+    margin-top: 4rem;
+    width: 100%;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      margin-top: 3rem;
+      width: 120px;
+    }
+
+    & > svg {
+      width: 12%;
+      height: auto;
+
+      @media (max-width: 768px) {
+        margin-top: 0;
+        width: 120px;
+      }
+    }
+  }
+}
